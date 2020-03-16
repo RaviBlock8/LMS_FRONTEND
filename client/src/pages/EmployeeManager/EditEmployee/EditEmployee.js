@@ -5,7 +5,7 @@ import axios from "axios";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
-import "./AddEmployee.css";
+import "../AddEmployee/AddEmployee.css";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -78,7 +78,7 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const AddEmployee = () => {
+const EditEmployee = () => {
   const classes = useStyles();
   const { register, handleSubmit } = useForm();
   const [Snackopen, setSnackOpen] = useState(false);
@@ -474,7 +474,7 @@ const AddEmployee = () => {
               id="saveButton"
               style={{ color: "white" }}
             >
-              Submit
+              Save changes
             </Button>
           </Grid>
           <Grid item xs={1}>
@@ -521,4 +521,4 @@ const AddEmployee = () => {
   );
 };
 
-export default AddEmployee;
+export default EditEmployee;
